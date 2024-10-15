@@ -71,16 +71,7 @@ typedef NTSTATUS(NTAPI* fNtCreateEvent)(
 	);
 
 
-typedef NTSTATUS(NTAPI* fNtGetContextThread)(
-	IN HANDLE               ThreadHandle,
-	OUT PCONTEXT            pContext
-	);
 
-
-typedef NTSTATUS(NTAPI* fNtContinue)(
-	IN PCONTEXT             ThreadContext,
-	IN BOOLEAN              RaiseAlert
-	);
 
 typedef NTSTATUS(NTAPI* fRtlCreateProcessParametersEx)(
 	PRTL_USER_PROCESS_PARAMETERS* pProcessParameters,
@@ -102,16 +93,6 @@ typedef VOID(NTAPI* fRtlInitUnicodeString)(
 	);
 
 
-typedef NTSTATUS(NTAPI* fnNtEncryptMemory)( //SystemFunction032
-	USTRING* data,
-	const USTRING* key
-	);
-
-
-typedef NTSTATUS(NTAPI* fnNtDecryptMemory)( //SystemFunction033
-	USTRING* data,
-	const USTRING* key
-	);
 
 
 
