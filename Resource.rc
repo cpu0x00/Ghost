@@ -1,0 +1,4 @@
+#include "resource1.h"
+
+
+IDR_RCDATA1 RCDATA "icon.ico"
