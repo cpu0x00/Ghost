@@ -52,12 +52,14 @@ ex: `python3 build.py -i shellcode.bin`
 
 the compilation is done on linux using the MinGW suite
 
-<a href=""> <img src="images/image.png" alt="image" /></a>
 
 
 
 
+<img src=image/image.png>
 
+
+*above is an example of a beacons stack gets hidden during its sleep time*
 
 
 ### Resources 
