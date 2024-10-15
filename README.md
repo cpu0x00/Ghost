@@ -33,7 +33,7 @@ ghost implements a shellcode hiding technique originally implemented by *roshtya
 
 - custom API hashing for resolving functions and system service numbers (SSNs)
 
-
+- putting shellcode in resources (this was shockingly effective xD)
 
 
 ### Note
@@ -43,6 +43,14 @@ Ghost heavily relies on understanding how your beacon sleeps , in case of cobalt
 if you want to use it with other C2 beacons you will need to use a tool like apimonitor to intercept api calls for your "beacon" , detect the api called on sleep and replacing it in Ghost.cpp to hook it , for example for MDSec's NightHawk one of the CreateThreadPool APIs needs to be hooked 
 
 
+
+### build
+
+To build the binary use the python `build.py` script providing the shellcode
+
+ex: `python3 build.py -i shellcode.bin` 
+
+the compilation is done on linux using the MinGW suite
 
 ### Resources 
 - https://github.com/Kudaes/Fiber
