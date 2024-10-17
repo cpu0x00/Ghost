@@ -34,11 +34,15 @@ WIN_MAIN = "int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PW
 
 # ----------- #
 
-
-
 def LOG_OUTPUT(string):
 	print(f"[BUILD] {string}")
 
+# check if build folder exists and otherwise create it
+if not os.path.exists(BUILD_DIR):
+    os.makedirs(BUILD_DIR)
+    LOG_OUTPUT(f"Folder '{BUILD_DIR}' created.")
+else:
+    LOG_OUTPUT(f"Folder '{BUILD_DIR}' already exists.")
 
 def generate_random_key(length):
     return get_random_bytes(length)
